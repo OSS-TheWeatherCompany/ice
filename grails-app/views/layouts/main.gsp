@@ -41,9 +41,9 @@
     </div>
   </div>
   <ul class="nav" ng-show="!graphOnly()">
-    <li class="menuButton">
+    <!-- <li class="menuButton">
         <a class="" href="${resource(dir: 'dashboard', file: 'summary')}" ng-click="reload()">AWS Summary</a>
-    </li>
+    </li> -->
     <li class="menuButton dropdown">
       <a class="link_with_params" href="${resource(dir: 'dashboard', file: 'detail')}#{{getTimeParams()}}" ng-click="reload()">AWS Details</a>
       <ul>

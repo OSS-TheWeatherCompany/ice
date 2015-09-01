@@ -373,7 +373,9 @@ class DashboardController {
         render result as JSON
     }
 
-    def summary = {}
+    def summary = {
+      redirect(action: "detail")
+    }
 
     def detail = {}
 
@@ -531,12 +533,12 @@ class DashboardController {
                     aggregate,
                     forReservation
                 );
-                
+
                 if (groupBy == TagType.Product && dataOfProduct.size() > 0) {
                     double[] currentProductValues = dataOfProduct.get(dataOfProduct.keySet().iterator().next());
                     dataOfProduct.put(Tag.aggregated, Arrays.copyOf(currentProductValues, currentProductValues.size()));
-                } 
-                
+                }
+
                 merge(dataOfProduct, data);
                 System.out.println(product);
             }
